@@ -9,7 +9,13 @@ To start the program run the following command from the client folder
 npm run dev
 ```
 
-## Documentation
+## TODO
+- Added styling
+- Models detail page
+- Nav bar
+- Vertical filter on the left
+- Admin login/logout
+- Admin features: edit, add, remove data
 
 ## Project Structure
 ```bash

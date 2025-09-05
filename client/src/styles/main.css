@@ -31,6 +31,10 @@ tbody td:first-child {
   width: 20%;
 }
 
+thead tr:nth-child(2) th {
+  text-align: center;
+}
+
 .dot {
   display: inline-block;
   width: 10px;
@@ -46,4 +50,59 @@ tbody td:first-child {
 
 .dot.off {
   opacity: 0.5;
+}
+
+.app-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+}
+
+.app-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111827;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-desc {
+  font-size: 12px;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-bar {
+  margin: 16px 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0;
+  align-items: center;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.results-count {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 4px 0;
 }
