@@ -7,12 +7,21 @@ function Dot({ on }) {
 
 export default function App() {
   const [q, setQ] = useState('')
+  const [filters, setFilters] = useState({
+    android: false,
+    ios: false,
+    web: false,
+    free: false,
+  })
 
   const rows = useMemo(() => {
-    return models.filter(m =>
-      m.name.toLowerCase().includes(q.toLowerCase())
-    )
-  }, [q])
+  return models
+    .filter(m => m.name.toLowerCase().includes(q.toLowerCase()))
+    .filter(m => (filters.android ? m.android === 1 : true))
+    .filter(m => (filters.ios     ? m.ios === 1     : true))
+    .filter(m => (filters.web     ? m.web === 1     : true))
+    .filter(m => (filters.free    ? m.free === 1    : true))
+  }, [q, filters])
 
   return (
     <>
@@ -29,7 +38,21 @@ export default function App() {
           }}
         />
       </div>
-
+      <div style={{ display: 'flex', gap: 16, margin: '8px 0' }}>
+        {['android','ios','web','free'].map(key => (
+          <label key={key} style={{ display:'flex', alignItems:'center', gap:6 }}>
+            <input
+              type="checkbox"
+              checked={filters[key]}
+              onChange={() => setFilters(f => ({ ...f, [key]: !f[key] }))}
+            />
+            {key[0].toUpperCase() + key.slice(1)}
+          </label>
+        ))}
+      </div>
+      <div style={{ fontSize: 12, color: '#6b7280', margin: '4px 0' }}>
+        {rows.length} result{rows.length === 1 ? '' : 's'}
+      </div>
       <table>
         <thead>
           <tr>
