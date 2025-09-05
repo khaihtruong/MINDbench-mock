@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+  border: 1px solid #d1d5db;
+}
+
+thead th {
+  text-align: center;
+  padding: 10px 8px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #d1d5db;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 10px 8px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+thead th:first-child,
+tbody td:first-child {
+  text-align: left;
+  width: 28%;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 2px solid #9ca3af;
+}
+
+.dot.on {
+  background: #111827;
+  border-color: #111827;
+}
+
+.dot.off {
+  opacity: 0.5;
+}
