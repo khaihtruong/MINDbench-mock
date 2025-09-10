@@ -4,11 +4,26 @@ Dashboard that allow users to view and compare current LLM models perform in men
 
 ## Installation
 
-To start the program run the following command from the client folder
+To start the program run the following command from the client folder (currently using mock data)
 ```bash
+cd client
 npm run dev
 ```
 
+## Draft data models
+Models
+Name                   | Description | Version | Android | IOS | Web | Free | Monthly | Annual
+VarChar (primary key)  | VarChar     | VarChar | Int     | Int | Int | Int  | Int     | Int
+
+Hexaco_test
+Name                   |
+VarChar (primary key)  |
+
+Bigfive_test
+
+MBTI_test
+
+Enneagram_test
 ## TODO
 - Added styling
 - Models detail page

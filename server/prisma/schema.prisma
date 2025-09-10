@@ -17,11 +17,11 @@ datasource db {
 model Models {
   id      Int    @id @default(autoincrement())
   name    String
+  version String
   android Int
   ios     Int
   web     Int
   free    Int
   monthly String
   annual  String
-  best    String
 }
